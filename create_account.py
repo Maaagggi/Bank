@@ -1,6 +1,6 @@
 # For generating Account number
-from account import Account
-from customer import Customer
+from .account import Account
+from .customer import Customer
 import uuid
 
 class CreateNewAccount:
