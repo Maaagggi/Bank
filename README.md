@@ -39,26 +39,6 @@ This project implements a basic banking system with the following functionalitie
     *   To perform transactions, use instances of `MakeTransaction`
     *   To generate statements, use instances of  `GenerateAccountStatement`
 
-**Example Usage**
-
-```python
-from <your_script_name> import CreateNewAccount, MakeTransaction, GenerateAccountStatement
-
-repository = AccountRepository()  
-
-# Create an account
-create_account_usecase = CreateNewAccount(repository)
-new_account = create_account_usecase.create_account("1001", "Alice Johnson", "alice@example.com", "555-1234")
-
-# Perform a deposit
-make_transaction = MakeTransaction(repository)
-make_transaction.make_transaction(new_account.account_number, 500, 'deposit')
-
-# Generate a statement
-generate_statement = GenerateAccountStatement(repository)
-statement = generate_statement.generate_account_statement(new_account.account_number)
-print(statement)
-```
 
 **TODO**
 
