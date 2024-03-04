@@ -1,8 +1,3 @@
-# Bank
-Here's a README file for your banking system program, including sections that cover the key components we've created so far.
-
-**README.md**
-
 **Simple Banking System**
 
 This project implements a basic banking system with the following functionalities:
