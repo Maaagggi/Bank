@@ -1,6 +1,6 @@
 # For generating Account number
-from .account import Account
-from .customer import Customer
+from account import Account
+from customer import Customer
 import uuid
 
 class CreateNewAccount:
@@ -22,7 +22,10 @@ class CreateNewAccount:
         # Generate a new account number using UUID
         account_number = str(uuid.uuid4())
 
-        # Create the Account object
-        new_account = Account(account_number, customer_id, account_number, 0)
+        # Create the Account object 
+        new_account = Account(account_number, customer, account_number, 0)  # Associate with customer
 
-        return new_account
+        # Save the account using the repository
+        self.account_repository.save_account(new_account)
+
+        return new_account 
